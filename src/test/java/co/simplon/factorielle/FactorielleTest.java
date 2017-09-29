@@ -15,6 +15,8 @@ public class FactorielleTest {
 		return res;
 	}
 	
+
+	
 	@Test (expected = IllegalArgumentException.class)
 	public void factorielle_0_egal_moins_1() {
 		//given
@@ -105,21 +107,26 @@ public class FactorielleTest {
 				 assertTrue(res == resCalcule);
 	}
 
-	@Test (timeout=1)
+//	@Test (timeout = 1000000)
+	@Test
 	public void timoutFactoriel_100_passes() {
 		//given
-				long nbr = 1;  //fact(nbr)
+		
+				long nbr = 19;  //fact(nbr)
 				long res = 1;  //résultat attendu
 				long resCalcule =0;
 				//when
-				
-				for (long i=0;i<1000000000L;i++){
+				Duration dureExec = new Duration();
+	
+				for (long i=0;i<200000L;i++){
 					resCalcule = calculer(nbr);
 				};
 				
-				//then
-			//	 assertEquals(res,resCalcule);
+				System.out.println("Durée exécution en ms de timoutFactoriel_100_passes: " + dureExec.duree());
+			
+				
 				 assertTrue(res == resCalcule);
+					
 				 
 	}
 }
