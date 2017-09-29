@@ -12,8 +12,9 @@ public class Duration {
 		debut = System.currentTimeMillis();
 	}
 
-    public double duree(){
+    public double duree(String nom){
     	fin = System.currentTimeMillis();
+    	System.out.println("Durée exécution en ms de "+nom+ " "+(fin - debut));
     	return fin - debut;
     }
 

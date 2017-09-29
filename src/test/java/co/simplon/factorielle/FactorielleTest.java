@@ -15,12 +15,21 @@ public class FactorielleTest {
 		return res;
 	}
 	
-
+	 public static String getMethodeFullName()
+	  {
+	          Throwable t = new Throwable();
+	          t.fillInStackTrace();
+	          StackTraceElement e = t.getStackTrace()[1];
+	          String className = e.getClassName();
+	          String functionName = e.getMethodName();
+	          return functionName;
+	  //        return className + "." + functionName;
+	  }
 	
 	@Test (expected = IllegalArgumentException.class)
 	public void factorielle_0_egal_moins_1() {
 		//given
-		long nbr = 1;  //fact(nbr)
+		long nbr = -1;  //fact(nbr)
 	//	long res = 1;  //résultat attendu
 		long resCalcule;
 		//when
@@ -86,10 +95,6 @@ public class FactorielleTest {
 			//	 assertEquals(res,resCalcule);
 				fail("la diff est toto " + (resCalcule - res));
 				assertTrue("la diff est de " + (resCalcule - res),res == resCalcule);
-					 
-				
-					 
-				 
 				 
 				 ;
 	}
@@ -118,11 +123,11 @@ public class FactorielleTest {
 				//when
 				Duration dureExec = new Duration();
 	
-				for (long i=0;i<200000L;i++){
+				for (long i=0;i<1L;i++){
 					resCalcule = calculer(nbr);
 				};
 				
-				System.out.println("Durée exécution en ms de timoutFactoriel_100_passes: " + dureExec.duree());
+				dureExec.duree(getMethodeFullName());
 			
 				
 				 assertTrue(res == resCalcule);
