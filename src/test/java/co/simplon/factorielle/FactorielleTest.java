@@ -94,7 +94,7 @@ public class FactorielleTest {
 				//then
 			//	 assertEquals(res,resCalcule);
 				fail("la diff est toto " + (resCalcule - res));
-				assertTrue("la diff est de " + (resCalcule - res),res == resCalcule);
+				assertTrue("la diff est de " + (resCalcule - res),res != resCalcule);
 				 
 				 ;
 	}
