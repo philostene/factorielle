@@ -107,11 +107,10 @@ public class FactorielleTest {
 				 
 				//then
 			//	 assertEquals(res,resCalcule);
-				 assertTrue(res == resCalcule);
+				 assertTrue(res != resCalcule);
 	}
 
-//	@Test (timeout = 1000000)
-	@Test
+	@Test (timeout = 100)
 	public void timoutFactoriel_100_passes() {
 		//given
 		
@@ -124,7 +123,7 @@ public class FactorielleTest {
 				for (long i=0;i<1L;i++){
 					resCalcule = calculer(nbr);
 				};
-				
+				res = resCalcule;
 				dureExec.duree(getMethodeFullName());
 			
 				
