@@ -9,7 +9,7 @@
 	        </encoder>
 	    </appender>
 	 
-	    <logger name="co.simplon.factorielle.Factorielle" level="TRACE" >
+	    <logger name="co.simplon.factorielle.Factorielle" level="OFF" >
 	            <appender-ref ref="STDOUT" />
 	    </logger>
 	 
