@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 public class Factorielle 
 {
 	static Logger LOGGER =  (Logger) LoggerFactory.getLogger(Factorielle.class);
+	
 	public Factorielle() {
 		super();
 	}
