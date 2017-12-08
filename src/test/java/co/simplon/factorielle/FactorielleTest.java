@@ -93,10 +93,8 @@ public class FactorielleTest {
 				resCalcule = calculer(nbr);
 				//then
 			//	 assertEquals(res,resCalcule);
-				fail("la diff est toto " + (resCalcule - res));
+				System.out.println("la diff est toto " + (resCalcule - res));
 				assertTrue("la diff est de " + (resCalcule - res),res != resCalcule);
-				 
-				 ;
 	}
 	@Test
 	public void factorielle_3_pas_egal_6() {
